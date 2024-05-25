@@ -4,6 +4,8 @@ createApp({
   data() {
     return {
 
+      test: "test",
+
     };
   },
   created() {
