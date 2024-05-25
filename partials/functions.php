@@ -4,11 +4,12 @@
  * Function: read data from file and return an array.
  * @return array
  */
-function get_data() {
-   
-  $discs_json_string = file_get_contents("./dischi.json"); // json string
+function get_data()
+{
 
-  return json_decode($discs_json_string, true); // array
+   $discs_json_string = file_get_contents("./dischi.json"); // json string
+
+   return json_decode($discs_json_string, true); // array
 
 };
 
@@ -19,17 +20,18 @@ function get_data() {
  * 
  * @return [type]
  */
-function send_http_response($data) {
+function send_http_response($data)
+{
 
    $data_response = [
-     "results" => $data,
-     "success" => true
+      "results" => $data,
+      "success" => true
    ];
- 
+
    $data_json = json_encode($data_response); // json string
- 
-   header("Content-Type: application/json");
- 
-   // Invio la risposta
-   echo $data_json;
- }
+
+   header("Content-Type: application/json"); // alert the browser of json string in coming
+
+   echo $data_json; // send response
+
+};

@@ -1,0 +1,18 @@
+:root {
+
+   --primary-dark: #06131f;
+   --secondary-dark: #112030;
+
+   --primary-grey: #1d2d3c;
+
+}
+
+header {
+   background-color: var(--primary-dark);
+
+}
+
+main {
+   background-color: var(--secondary-dark);
+
+}
