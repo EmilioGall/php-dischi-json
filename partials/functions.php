@@ -35,3 +35,22 @@ function send_http_response($data)
    echo $data_json; // send response
 
 };
+
+
+/**
+ * Function: toggle value of key Like and update List in JSON file.
+ * @param int $index
+ * @param array $todo_list
+ * 
+ * @return array
+ */
+function toggle_like($index, $array)
+{
+
+   $array[$index]["like"] = !$array[$index]["like"];
+
+   file_put_contents("./dischi.json", json_encode($array));
+
+   return $array;
+
+};

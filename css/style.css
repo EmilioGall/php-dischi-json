@@ -34,3 +34,8 @@ header img {
    background-color: var(--secondary-dark);
 
 }
+
+.heart:hover {
+   cursor: pointer;
+
+}

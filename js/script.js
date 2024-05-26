@@ -25,6 +25,28 @@ createApp({
    },
    methods: {
 
+      toggleLike(givenIndex) {
+
+         const data = {
+            action: "toggle-like",
+            disc_index: givenIndex,
+         };
+
+         axios
+            .post(this.urlAPI, data, {
+
+               headers: {'Content-Type': 'multipart/form-data'},
+
+            })
+            .then((resp) => {
+
+               this.discsArray = resp.data.results;
+   
+               console.log(this.discsArray);
+   
+            });
+      },
+      
    },
 
 }).mount("#app");
