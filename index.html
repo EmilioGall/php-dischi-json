@@ -31,15 +31,46 @@
 
    <div id="app">
 
-      <header>
-         
-         <h1 class="text-white"> {{ test }} </h1>
+      <header class="d-flex align-items-center">
+
+         <div class="container-sm">
+
+            <img src="./assets/img/spotify-logo-png-7057.png" alt="Page logo">
+
+         </div>
 
       </header>
 
-      <main>
+      <main class="mt-4">
 
-         <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit libero quas sequi officia incidunt facere ipsum. Rerum aperiam quo laborum, nemo, commodi voluptates soluta sapiente minima eum maiores earum quaerat?</p>
+         <div class="container-sm w-75">
+
+            <div class="row">
+
+               <div class="col-4 p-3 d-flex justify-content-center" v-for="(disc, discIndex) in discsArray">
+
+                  <div class="card p-3 text-white" style="width: 100%;">
+
+                     <img :src="disc.poster" class="card-img-top" :alt='`${disc.title} cover`'>
+
+                     <div class="card-body text-center">
+
+                       <h4 class="card-title"> {{disc.title}} </h4>
+
+                       <h5 class="card-title"> {{disc.author}} </h5>
+
+                       <h6 class="card-title"> {{disc.year}} </h6>
+
+                     </div>
+                     
+                   </div>
+
+
+               </div>
+
+            </div>
+
+         </div>
 
       </main>
 

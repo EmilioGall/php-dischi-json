@@ -1,17 +1,30 @@
 const { createApp } = Vue;
 
 createApp({
-  data() {
-    return {
+   data() {
+      return {
 
-      test: "test",
+         discsArray: [],
+         urlAPI: "http://localhost/boolean/php-dischi-json/server.php",
 
-    };
-  },
-  created() {
+      };
+   },
+   created() {
 
-  },
-  methods: {
+      axios
+         .get(this.urlAPI)
+         .then((resp) => {
 
-  },
+            this.discsArray = resp.data.results;
+
+            console.log(this.discsArray);
+
+         });
+
+
+   },
+   methods: {
+
+   },
+
 }).mount("#app");

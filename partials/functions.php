@@ -28,7 +28,7 @@ function send_http_response($data)
       "success" => true
    ];
 
-   $data_json = json_encode($data_response); // json string
+   $data_json = json_encode($data_response, JSON_PRETTY_PRINT); // json string
 
    header("Content-Type: application/json"); // alert the browser of json string in coming
 

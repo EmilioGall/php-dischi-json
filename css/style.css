@@ -5,14 +5,32 @@
 
    --primary-grey: #1d2d3c;
 
+   --header-h: 80px;
+
+}
+
+body {
+   background-color: var(--primary-grey);
+
 }
 
 header {
    background-color: var(--primary-dark);
+   height: var(--header-h);
 
 }
 
 main {
+   height: calc(100vh - var(--header-h));
+
+}
+
+header img {
+   height: calc(var(--header-h) - (var(--header-h)/4));
+
+}
+
+.card {
    background-color: var(--secondary-dark);
 
 }
